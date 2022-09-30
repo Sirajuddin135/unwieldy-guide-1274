@@ -1,51 +1,29 @@
 package com.cims.bean;
 
 public class CaseDTO {
-	private String victimName;
-	private String suspectName;
-	private int criminalId;
 	private String date;
-	
+	private String policeStation;
 	private int caseId;
 	private String typeOfCrime;
-	
+	private String desc;
+	private String victimName;
+	private int criminalId;
+	private String criminalName;
 	private String status;
 
 	public CaseDTO() {}
-	
-	public CaseDTO(String victimName, String suspectName, int criminalId, String date, int caseId, String typeOfCrime,
-			String status) {
-		this.victimName = victimName;
-		this.suspectName = suspectName;
-		this.criminalId = criminalId;
+
+	public CaseDTO(String date, String policeStation, int caseId, String typeOfCrime, String desc, String victimName,
+			int criminalId, String criminalName, String status) {
 		this.date = date;
+		this.policeStation = policeStation;
 		this.caseId = caseId;
 		this.typeOfCrime = typeOfCrime;
-		this.status = status;
-	}
-
-	public String getVictimName() {
-		return victimName;
-	}
-
-	public void setVictimName(String victimName) {
+		this.desc = desc;
 		this.victimName = victimName;
-	}
-
-	public String getSuspectName() {
-		return suspectName;
-	}
-
-	public void setSuspectName(String suspectName) {
-		this.suspectName = suspectName;
-	}
-
-	public int getCriminalId() {
-		return criminalId;
-	}
-
-	public void setCriminalId(int criminalId) {
 		this.criminalId = criminalId;
+		this.criminalName = criminalName;
+		this.status = status;
 	}
 
 	public String getDate() {
@@ -54,6 +32,14 @@ public class CaseDTO {
 
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	public String getPoliceStation() {
+		return policeStation;
+	}
+
+	public void setPoliceStation(String policeStation) {
+		this.policeStation = policeStation;
 	}
 
 	public int getCaseId() {
@@ -72,6 +58,38 @@ public class CaseDTO {
 		this.typeOfCrime = typeOfCrime;
 	}
 
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public String getVictimName() {
+		return victimName;
+	}
+
+	public void setVictimName(String victimName) {
+		this.victimName = victimName;
+	}
+
+	public int getCriminalId() {
+		return criminalId;
+	}
+
+	public void setCriminalId(int criminalId) {
+		this.criminalId = criminalId;
+	}
+
+	public String getCriminalName() {
+		return criminalName;
+	}
+
+	public void setCriminalName(String criminalName) {
+		this.criminalName = criminalName;
+	}
+
 	public String getStatus() {
 		return status;
 	}
@@ -82,7 +100,8 @@ public class CaseDTO {
 
 	@Override
 	public String toString() {
-		return "CaseDTO [victimName=" + victimName + ", suspectName=" + suspectName + ", criminalId=" + criminalId
-				+ ", date=" + date + ", caseId=" + caseId + ", typeOfCrime=" + typeOfCrime + ", status=" + status + "]";
+		return "CaseDTO [date=" + date + ", policeStation=" + policeStation + ", caseId=" + caseId + ", typeOfCrime="
+				+ typeOfCrime + ", desc=" + desc + ", victimName=" + victimName + ", criminalId=" + criminalId
+				+ ", criminalName=" + criminalName + ", status=" + status + "]";
 	}
 }
