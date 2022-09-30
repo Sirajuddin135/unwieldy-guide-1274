@@ -5,15 +5,18 @@ import java.util.List;
 import com.cims.bean.Case;
 import com.cims.bean.CaseDTO;
 import com.cims.bean.Criminal;
+import com.cims.bean.CriminalDTO;
+import com.cims.exceptions.CaseException;
+import com.cims.exceptions.CriminalException;
 
 public interface CaseDao {
 	public String registerACase(Case c, Criminal criminal);
 	
-	public List<CaseDTO> getCasesByCriminalNames(String suspectName);
+	public List<CaseDTO> getCasesByCriminalNames(String suspectName) throws CaseException;
 	
-	public List<CaseDTO> getCriminalsByCrimeType(String typeOfCrime);
+	public List<CriminalDTO> getCriminalsByCrimeType(String typeOfCrime) throws CriminalException;
 	
-	public String updateCaseStatus(int caseId);
+	public String updateCaseStatus(int caseId) throws CaseException;
 	
-	public List<Integer> getTotalCaseByArea(String areaName);
+	public List<String> getTotalCaseByArea(String areaName);
 }

@@ -46,11 +46,11 @@ public class RegisterACase {
 		
 		CaseDao crime = new CaseDaoImpl();
 		
-		Case case1 = new Case(dateOfCrime, place, typeOfCrime, victimName, description, suspectName);
+		Case c = new Case(dateOfCrime, place, typeOfCrime, victimName, description, suspectName);
 		
 		Criminal criminal = new Criminal(suspectName, age, gender, address, identificationMarks, areaOfArrest, typeOfCrime);
 		
-		String result = crime.registerACase(case1, criminal);
+		String result = crime.registerACase(c, criminal);
 		
 		System.out.println(result);
 		
