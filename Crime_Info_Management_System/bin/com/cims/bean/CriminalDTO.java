@@ -130,8 +130,9 @@ public class CriminalDTO {
 
 	@Override
 	public String toString() {
-		return "CriminalDTO [criminalId=" + criminalId + ", criminalName=" + criminalName + ", age=" + age + ", gender="
-				+ gender + ", identificationMarks=" + identificationMarks + ", address=" + address + ", areaOfCrime=" + areaOfCrime + ", typeOfCrime=" + typeOfCrime
-				+ ", desc=" + desc + ", caseId= " + caseId + ", victimName=" + victimName + ", status=" + status + "]";
+		return "\nCriminal ID: " + criminalId + "\nCriminal name: " + criminalName + "\nAge: " + age + "\nGender: " +
+				gender + "\nIdentification Marks: " + identificationMarks + "\nAddress: " + address + "\nArea of crime: " + 
+				areaOfCrime + "\nType of crime: " + typeOfCrime	+ "\nDescription: " + desc + "\nCase ID:  " + caseId + 
+				"\nVictim name: " + victimName + "\nStatus: " + status;
 	}
 }

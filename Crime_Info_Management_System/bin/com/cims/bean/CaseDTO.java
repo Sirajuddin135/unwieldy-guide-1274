@@ -100,8 +100,8 @@ public class CaseDTO {
 
 	@Override
 	public String toString() {
-		return "CaseDTO [date=" + date + ", policeStation=" + policeStation + ", caseId=" + caseId + ", typeOfCrime="
-				+ typeOfCrime + ", desc=" + desc + ", victimName=" + victimName + ", criminalId=" + criminalId
-				+ ", criminalName=" + criminalName + ", status=" + status + "]";
+		return "\nDate: " + date + "\nPolice Station: " + policeStation + "\nCase ID: " + caseId + "\nType of crime: "+ 
+				typeOfCrime + "\nDescription: " + desc + "\nVictim name: " + victimName + "\nCriminal ID: " + criminalId + 
+				"\nCriminal name: " + criminalName + "\nStatus: " + status;
 	}
 }
