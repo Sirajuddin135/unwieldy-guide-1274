@@ -10,13 +10,13 @@ import com.cims.exceptions.CaseException;
 import com.cims.exceptions.CriminalException;
 
 public interface CaseDao {
-	public String registerACase(Case c, Criminal criminal);
-	
-	public List<CaseDTO> getCasesByCriminalNames(String suspectName) throws CaseException;
-	
-	public List<CriminalDTO> getCriminalsByCrimeType(String typeOfCrime) throws CriminalException;
+	public String registerACase(Case c, Criminal criminal) throws CriminalException, CaseException;
 	
 	public String updateCaseStatus(int caseId) throws CaseException;
 	
-	public List<String> getTotalCaseByArea(String areaName);
+	public List<CriminalDTO> getCriminalsByCrimeType(String typeOfCrime) throws CriminalException;
+	
+	public List<CaseDTO> getCasesByCriminalNames(String suspectName) throws CaseException;
+	
+	public List<String> getTotalCaseByArea(String areaName) throws CaseException;
 }
